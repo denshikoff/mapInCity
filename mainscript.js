@@ -1,7 +1,5 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGltYWRlbnNoY2giLCJhIjoiY2w3bmw0eWU1MDlscjN1cDU4dzU0Z2NucyJ9.9cbkIoc0Qn8i6TUm0I-NeQ';
 
-const coordinates = document.getElementById('coordinates');
-
 //создание карты
 const map = new mapboxgl.Map({
     container: "map",
@@ -10,6 +8,7 @@ const map = new mapboxgl.Map({
     zoom: 12 // starting zoom
 });
 map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+
 
 let ll = new mapboxgl.LngLat(0,0)
 
@@ -20,12 +19,14 @@ map.on('mousemove', (e) => {
 
 
 map.on('click', (e) => {
-        const marker = new mapboxgl.Marker({
-            color: "#FFFFFF",
-            draggable: true
-        }).setLngLat(ll)
-            .addTo(map);
+    $('#exampleModal').modal('show');
+    const marker = new mapboxgl.Marker({
+        color: "#FFFFFF",
+        draggable: true
+    }).setLngLat(ll)
+        .addTo(map);
 });
+
 
 
 

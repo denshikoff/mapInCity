@@ -40,17 +40,6 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.btn {
-    background: rgb(77, 204, 189);;
-    position: absolute;
-    bottom: 40px;
-    left: 40%;
-    padding: 15px 32px;
-    margin: 0;
-    font-size: 11px;
-    line-height: 18px;
-    border-radius: 3px;
-}
 
 .style_button_area {
     background: rgba(0, 0, 0, 0.5);
