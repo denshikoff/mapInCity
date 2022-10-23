@@ -1,5 +1,11 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGltYWRlbnNoY2giLCJhIjoiY2w3bmw0eWU1MDlscjN1cDU4dzU0Z2NucyJ9.9cbkIoc0Qn8i6TUm0I-NeQ';
 
+/*//file
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var filepath = "C:\\Users\\densh\\Desktop\\диплом\\data.txt";
+var filesObject = fso.OpenTextFile(filepath, 8, true);*/
+
+
 //создание карты
 const map = new mapboxgl.Map({
     container: "map",
@@ -9,7 +15,11 @@ const map = new mapboxgl.Map({
 });
 map.addControl(new mapboxgl.NavigationControl(), 'top-right')
 
+/*загрузка старый точек*/
+/*map.on('load', () => {
+    map.addSource('places', {*/
 
+//добавление маркера
 let ll = new mapboxgl.LngLat(0,0)
 
 //события мыши
@@ -19,16 +29,29 @@ map.on('mousemove', (e) => {
 
 
 map.on('click', (e) => {
-    $('#exampleModal').modal('show');
-    const marker = new mapboxgl.Marker({
-        color: "#FFFFFF",
-        draggable: true
-    }).setLngLat(ll)
-        .addTo(map);
+    $('#Modalform').modal('show');
 });
 
 
+//модальное окно
+$('#submit').click(function(){
 
+    const marker = new mapboxgl.Marker({
+        color: "#FFFFFF",
+        draggable: false,
+    }).setLngLat(ll)
+        .addTo(map);
+
+    var geoJSON = {
+        "text" : document.getElementById("message-text").value,
+        "type" : document.getElementById("type_text").value,
+        "point" : ll
+    };
+    console.log(geoJSON.toString())
+    document.getElementById("message-text").value = ""
+    $('#Modalform').modal('hide');
+
+});
 
 
 

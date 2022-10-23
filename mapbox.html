@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
 
@@ -10,19 +10,18 @@
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
     <link rel="stylesheet" href="./style.css">
-
     <title>Решаем вместе</title>
 </head>
 <body>
 
 <div id="map"></div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="Modalform" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ввести данные</h5>
+                <h5 class="modal-title" id="ModalLabel">Ввести данные</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -31,20 +30,22 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <label for="type_text" class="col-form-label">Тип проблемы:</label>
+                        <input type="text" id="type_text" class="form-control" >
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <label for="message-text" class="col-form-label">Описание проблемы:</label>
+                        <textarea id="message-text" rows="4" class="form-control" ></textarea>
                     </div>
                 </form>
             </div>
 
             <!--Нижние кнопки-->
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
+                <button id="btn_close" type="button" class="btn btn-secondary" data-dismiss="modal" onclick="document.getElementById('message-text').value = ''">
+                    Close
+                </button>
+                <a href="#" id="submit" class="btn btn-success success">Submit</a>
             </div>
         </div>
     </div>
