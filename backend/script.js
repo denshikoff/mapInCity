@@ -1,11 +1,6 @@
-
+import { copyFileSync, constants } from 'node:fs';
+let data = fs.
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGltYWRlbnNoY2giLCJhIjoiY2w3bmw0eWU1MDlscjN1cDU4dzU0Z2NucyJ9.9cbkIoc0Qn8i6TUm0I-NeQ';
-
-/*//file
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var filepath = "C:\\Users\\densh\\Desktop\\диплом\\data.txt";
-var filesObject = fso.OpenTextFile(filepath, 8, true);*/
-
 
 //создание карты
 const map = new mapboxgl.Map({
@@ -47,27 +42,10 @@ $('#submit').click(function(){
         "text" : document.getElementById("message-text").value,
         "point" : coordinates
     };
-    let json = JSON.stringify(geoJsonMarker)
-    console.log(json)
-    document.getElementById("message-text").value = ""
+    let json = JSON.stringify(geoJsonMarker);
+    console.log(json);
+    document.getElementById("message-text").value = "";
     $('#Modalform').modal('hide');
 });
-
-
-
-/*const marker = new mapboxgl.Marker({
-    draggable: true
-})
-    .setLngLat([39.210, 51.660])
-    .addTo(map);
-
-
-function onDragEnd() {
-    const lngLat = marker.getLngLat();
-    coordinates.style.display = 'block';
-    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-}
-
-marker.on('dragend', onDragEnd);*/
 
 
