@@ -2,5 +2,3 @@
 {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type_problem":"ЖКХ","date":"5:10:2022","text":"bkjb"},"geometry":{"coordinates":{"lng":39.203972939568985,"lat":51.66228060111422},"type":"Point"}}]}
 {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type_problem":"ЖКХ","date":"5:10:2022","text":"xsaf"},"geometry":{"coordinates":{"lng":39.21085905889902,"lat":51.65866105246519},"type":"Point"}}]}
 {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type_problem":"ЖКХ","date":"5:10:2022","text":"xsaf"},"geometry":{"coordinates":{"lng":39.21085905889902,"lat":51.65866105246519},"type":"Point"}}]}
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type_problem":"ЖКХ","date":"5:10:2022","text":"csacas"},"geometry":{"coordinates":[{"lng":39.20740362167294,"lat":51.66708742972364}],"type":"Point"}}]}
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type_problem":"ЖКХ","date":"5:10:2022","text":"dsvdsv"},"geometry":{"coordinates":[{"lng":39.21034332275417,"lat":51.666781328907064}],"type":"Point"}}]}

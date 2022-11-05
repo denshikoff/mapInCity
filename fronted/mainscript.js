@@ -7,14 +7,19 @@ const map = new mapboxgl.Map({
     center: [39.210, 51.660], // starting position
     zoom: 15 // starting zoom
 });
-map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-/*загрузка старый точек*/
-/*map.on('load', () => {
-    map.addSource('places', {*/
+
+
+
+//загрузка старый точек
+map.on('load', () => {
+    console.log(getJSON())
+})
 
 //добавление маркера
-let coordinates = new mapboxgl.LngLat(0,0)
+let coordinates = new mapboxgl.LngLat(0,0);
+let date = new Date();
 
 //события мыши
 map.on('mousemove', (e) => {
@@ -27,6 +32,8 @@ map.on('click', (e) => {
 });
 
 
+
+
 //модальное окно
 $('#submit').click(function(){
 
@@ -34,15 +41,13 @@ $('#submit').click(function(){
     el.className = 'marker';
     el.style.backgroundImage ="url('bus2.png')";
     new mapboxgl.Marker(el).setLngLat(coordinates).addTo(map);
-
-    let geoJsonMarker = {
+    let gjs = {
         "type" : document.getElementById("select_type").value,
         "text" : document.getElementById("message-text").value,
-        "point" : coordinates
-    };
-
-    let json = JSON.stringify(geoJsonMarker)
-/*    console.log(json);*/
+        "point" : coordinates,
+        "date" : date.getDate() + ":" + date.getMonth() + ":" + date.getFullYear()
+    }
+    let json = JSON.stringify(gjs)
     sendJSON(json);
     document.getElementById("message-text").value = ""
     $('#Modalform').modal('hide');
@@ -55,6 +60,17 @@ function sendJSON(jsonstr){
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(jsonstr);
     console.log(jsonstr)
+}
+
+function getJSON() {
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status == "200") {
+            return JSON.parse(this.responseText);
+        }
+    };
+    xhr.open("GET", new URL("http://localhost:3000"));
+    xhr.send();
 }
 
 
