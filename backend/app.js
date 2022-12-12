@@ -3,12 +3,19 @@ function addDataInFile(filename, data) {
     fs.appendFileSync(filename, data + '\n');
 }
 
+function addJsonInFile(filename, data) {
+    const fs = require('fs');
+    let rawData = fs.readFileSync(filename);
+    let jsonArr = JSON.parse(rawData);
+    jsonArr.push(data);
+    fs.writeFileSync(filename, JSON.stringify(jsonArr));
+}
+
 
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 
-var num_req = 0;
 let infoStr;
 let newData;
 let date = new Date();
@@ -26,8 +33,9 @@ app.use(function (req, res, next) {
 });
 
 app.post('/', (req, res) => {
-    newData = JSON.stringify(req.body);
-    addDataInFile('data.json', newData);
+    newData = req.body;
+   // addDataInFile('data.json', newData + ',');
+    addJsonInFile('data.json', newData);
     //log
     infoStr = "New data added at " + date.toLocaleDateString() + ' ' + date.getHours()+ ':' + date.getMinutes() + ':' + date.getSeconds() + '\n';
     addDataInFile('server.log', infoStr);
@@ -35,7 +43,6 @@ app.post('/', (req, res) => {
 
 app.get('/', (req, res) => {
     let jsonData = require('./data.json');
-    console.log(jsonData);
     res.send(jsonData);
 });
 

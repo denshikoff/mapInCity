@@ -24,7 +24,6 @@ body {
 }
 
 .marker {
-    /*background-image: url('bus2.png');*/
     background-size: cover;
     width: 30px;
     height: 30px;

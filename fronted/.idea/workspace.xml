@@ -16,7 +16,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -26,7 +26,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\densh\Desktop\диплом\fronted\png" />
       <recent name="C:\Users\densh\Desktop\диплом\fronted" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\densh\Desktop\диплом\fronted\png" />
     </key>
   </component>
   <component name="RunManager">
@@ -55,6 +59,9 @@
       <workItem from="1667024789825" duration="1272000" />
       <workItem from="1667036666791" duration="476000" />
       <workItem from="1667661028459" duration="8549000" />
+      <workItem from="1668354299289" duration="9570000" />
+      <workItem from="1668626640550" duration="461000" />
+      <workItem from="1668840060909" duration="247000" />
     </task>
     <servers />
   </component>
@@ -62,11 +69,12 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1667663270017">
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1668840069581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.65.1920.1040@0.0.1536.824" timestamp="1667663270017" />
-    <state x="2660" y="340" key="FileChooserDialogImpl/0.0.1536.824/1920.65.1920.1040@1920.65.1920.1040" timestamp="1667024853730" />
+    <state x="2660" y="340" key="FileChooserDialogImpl/0.0.1536.824/1920.65.1920.1040@1920.65.1920.1040" timestamp="1668354401086" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1668840069581" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1666979588798">
       <screen x="1920" y="65" width="1920" height="1040" />
     </state>
